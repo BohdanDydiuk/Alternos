@@ -1,1 +1,39 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="reg_body">
+    <div class="reg_logo">
+        <img src="img/logo.png" alt="Alternos Logo">
+        <span>Alternos</span>
+    </div>
+    <div class="reg_container">
+        <h1>Створіть ваш акаунт</h1>
+        <button class="reg_google-login">Увійдіть через Google</button>
+        <hr>
+        <form>
+            <div class="reg_form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="reg_form-group">
+                <label for="confirm-password">Введіть пароль ще раз</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="reg_form-group">
+                <label for="email">Ел. пошта </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="reg_button">
+                <button type="submit" class="reg_register-button">Реєстрація</button>
+            </div>
+        </form>
+    </div>
+    <p class="reg_privacy-policy">Політика приватності</p>
+</body>
+</html>
