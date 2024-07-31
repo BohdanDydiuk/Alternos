@@ -1,3 +1,5 @@
+/*Сторінка регістрації*/
+
 .reg_body {
     background-color: #0a0e27;
     color: white;
@@ -34,7 +36,7 @@
     font-weight: bold;
 }
 
-h1 {
+.reg_h1 {
     margin-bottom: 20px;
 }
 
@@ -95,13 +97,27 @@ hr {
     justify-content: end;
 }
 
+/*Сторінка регістрації*/
 
 
 
+/*Загальні стилі*/
+
+.logo{
+    width: 40px;
+}
+
+.bag{
+    width: 30px;
+    margin-left: 20px;
+}
+
+/*Загальні стилі*/
 
 
+/*Сторінка main*/
 
-header{
+.mn_header{
     display: flex;
     height: 44px;
     background: rgba(22, 22, 23, 0.8);
@@ -113,80 +129,81 @@ header{
     width: 100%;
     text-align: center;
     z-index: 1000;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.logo{
-    width: 40px;
+.mn_a{
+    margin-left: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
 }
 
-.header-pages{
+.mn_header-pages{
     display: flex;
     align-items: center;
 }
 
-a{
-    margin-left: 75px;
-    color: white;
-    text-decoration: none;
-    font-size: small;
-}
-
-.shop_body {
+.mn_shop_body {
     background-color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
 }
 
-.banners {
+.mn_banners {
     width: 100%;
     text-align: center;
 }
 
-.banner_tel{
+.mn_banner_tel{
     background: url(img/banner_tel.jfif);
     height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    left: 0;
+    cursor: pointer;
 }
 
-.video_banner{
+.mn_video_banner{
     display: flex;
     width: 100%;
     height: 580px;
     background-color: black;
     margin-bottom: 16px;
     justify-content: center;
+    left: 0;
+    cursor: pointer;
 }
 
-.banner_tel-txt{
+.mn_banner_tel-txt{
     color: white;
     font-size: 32px;
     width: 420px;
 }
 
-.mini_banners {
+.mn_mini_banners {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.mini_banners_1{
+.mn_mini_banners_1{
     display: flex;
     flex-direction: row;
 }
 
-.mini_banners_2{
+.mn_mini_banners_2{
     display: flex;
     flex-direction: row;
 }
 
-h1 {
+.mn_h1 {
   margin-bottom: 20px;
   color: #ffffff;
 }
 
-.button1 {
+.mn_button1 {
   display: inline-block;
   padding: 10px 20px;
   background-color: #008CBA;
@@ -197,11 +214,11 @@ h1 {
   cursor: pointer;
 }
 
-.button1:hover{
+.mn_button1:hover{
     background-color: #0193c4;
 }
 
-.button2 {
+.mn_button2 {
     display: inline-block;
     padding: 10px 20px;
     background-color: transparent;
@@ -213,14 +230,14 @@ h1 {
     margin-left: 20px;
 }
 
-.button2:hover{
+.mn_button2:hover{
     color: white;
     background-color: #008CBA;
     border: 1px solid white;
 }
 
 
-.section1 {
+.mn_section1 {
     width: 50%;
     height: 580px;
     margin: 16px 16px 16px 0px;
@@ -228,9 +245,10 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.section2 {
+.mn_section2 {
     width: 50%;
     height: 580px;
     margin: 16px 16px 16px 0px;
@@ -238,9 +256,10 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.section3 {
+.mn_section3 {
     width: 50%;
     height: 580px;
     margin: 0px 16px 16px 0px;
@@ -248,9 +267,10 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.section4 {
+.mn_section4 {
     width: 50%;
     height: 580px;
     margin: 0px 16px 16px 0px;
@@ -258,11 +278,93 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.footer {
+.mn_footer {
   text-align: center;
   padding: 10px 0;
   font-size: 14px;
   color: #666;
+}
+
+/*Сторінка main*/
+
+
+
+.st_body{
+
+}
+
+.st_header{
+    display: flex;
+    height: 44px;
+    background: transparent;
+    align-items: center;
+    justify-content: space-around;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a{
+    margin-left: 40px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.st_Store_promotxt{
+    margin: 100px 200px 0px 200px;
+    display: flex;
+    width: 800px;
+}
+
+.st_h1-1{
+    font-size: 50px;
+}
+
+.st_h1-2{
+    color: #6e6e73;;
+    font-size: 50px;
+}
+
+.products{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0px 0px 200px; 
+    width: 80%;
+}
+
+.product-img{
+    height: 100px;
+}
+
+.Computers{
+    cursor: pointer;
+}
+
+.Phones {
+    cursor: pointer;
+}
+
+.Tablets {
+    cursor: pointer;
+}
+
+.Watches {
+    cursor: pointer;
+}
+
+.VRs {
+    cursor: pointer;
+}
+
+.Headphones {
+    cursor: pointer;
+}
+.TVs {
+    cursor: pointer;
+}
+
+.Accessoires{
+    cursor: pointer;
 }
