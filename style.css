@@ -1,7 +1,7 @@
 /*Сторінка регістрації*/
 
 .reg_body {
-    background-color: #0a0e27;
+    background-color: #000000;
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
@@ -97,27 +97,34 @@ hr {
     justify-content: end;
 }
 
+.reg_footer{
+    margin-top: 50px;
+    margin-right: 1300px;
+}
+
+.reg_header{
+    margin-bottom: 75px;
+    margin-right: 1300px;
+}
+
 /*Сторінка регістрації*/
 
 
 
-/*Загальні стилі*/
+/* Загальні стилі */
 
-.logo{
+.logo {
     width: 40px;
 }
 
-.bag{
+.bag {
     width: 30px;
     margin-left: 20px;
 }
 
-/*Загальні стилі*/
+/* Сторінка main */
 
-
-/*Сторінка main*/
-
-.mn_header{
+.mn_header {
     display: flex;
     height: 44px;
     background: rgba(22, 22, 23, 0.8);
@@ -132,14 +139,14 @@ hr {
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.mn_a{
+.mn_a {
     margin-left: 40px;
     color: white;
     text-decoration: none;
     font-size: 11px;
 }
 
-.mn_header-pages{
+.mn_header-pages {
     display: flex;
     align-items: center;
 }
@@ -147,6 +154,7 @@ hr {
 .mn_shop_body {
     background-color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
+    margin-top: 60px; /* Для відступу контенту від header */
 }
 
 .mn_banners {
@@ -154,7 +162,7 @@ hr {
     text-align: center;
 }
 
-.mn_banner_tel{
+.mn_banner_tel {
     background: url(img/banner_tel.jfif);
     height: 580px;
     display: flex;
@@ -165,7 +173,7 @@ hr {
     cursor: pointer;
 }
 
-.mn_video_banner{
+.mn_video_banner {
     display: flex;
     width: 100%;
     height: 580px;
@@ -176,7 +184,7 @@ hr {
     cursor: pointer;
 }
 
-.mn_banner_tel-txt{
+.mn_banner_tel-txt {
     color: white;
     font-size: 32px;
     width: 420px;
@@ -188,92 +196,51 @@ hr {
     flex-direction: column;
 }
 
-.mn_mini_banners_1{
-    display: flex;
-    flex-direction: row;
-}
-
-.mn_mini_banners_2{
+.mn_mini_banners_1, .mn_mini_banners_2 {
     display: flex;
     flex-direction: row;
 }
 
 .mn_h1 {
-  margin-bottom: 20px;
-  color: #ffffff;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.mn_button1, .mn_button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
 }
 
 .mn_button1 {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: white;
-  border: 1px solid white;
-  border-radius: 35px;
-  font-size: 16px;
-  cursor: pointer;
+    background-color: #008CBA;
+    color: white;
+    border: 1px solid white;
 }
 
-.mn_button1:hover{
+.mn_button1:hover {
     background-color: #0193c4;
 }
 
 .mn_button2 {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: transparent;
     color: #008CBA;
     border: 1px solid #008CBA;
-    border-radius: 35px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 20px;
 }
 
-.mn_button2:hover{
+.mn_button2:hover {
     color: white;
     background-color: #008CBA;
     border: 1px solid white;
 }
 
-
-.mn_section1 {
+.mn_section1, .mn_section2, .mn_section3, .mn_section4 {
     width: 50%;
     height: 580px;
-    margin: 16px 16px 16px 0px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.mn_section2 {
-    width: 50%;
-    height: 580px;
-    margin: 16px 16px 16px 0px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.mn_section3 {
-    width: 50%;
-    height: 580px;
-    margin: 0px 16px 16px 0px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.mn_section4 {
-    width: 50%;
-    height: 580px;
-    margin: 0px 16px 16px 0px;
+    margin: 16px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -282,10 +249,46 @@ hr {
 }
 
 .mn_footer {
-  text-align: center;
-  padding: 10px 0;
-  font-size: 14px;
-  color: #666;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .mn_header-pages {
+        display: none;
+    }
+
+    .mn_a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .mn_banners {
+        flex-direction: column;
+    }
+
+    .mn_banner_tel, .mn_video_banner {
+        height: auto;
+        padding: 20px;
+    }
+
+    .mn_banner_tel-txt {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .mn_mini_banners_1, .mn_mini_banners_2 {
+        flex-direction: column;
+    }
+
+    .mn_section1, .mn_section2, .mn_section3, .mn_section4 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
 }
 
 /*Сторінка main*/
@@ -305,6 +308,11 @@ hr {
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+.st_header-pages {
+    display: flex;
+    align-items: center;
+}
+
 a{
     margin-left: 40px;
     color: rgb(0, 0, 0);
@@ -313,7 +321,7 @@ a{
 }
 
 .st_Store_promotxt{
-    margin: 100px 200px 0px 200px;
+    margin: 100px 200px 0px 150px;
     display: flex;
     width: 800px;
 }
@@ -323,14 +331,23 @@ a{
 }
 
 .st_h1-2{
-    color: #6e6e73;;
+    color: #6e6e73;
     font-size: 50px;
+}
+
+.st_h1-3{
+    font-size: 30px;
+}
+
+.st_h1-4{
+    color: #6e6e73;;
+    font-size: 30px;
 }
 
 .products{
     display: flex;
     justify-content: space-between;
-    margin: 100px 0px 0px 200px; 
+    margin: 100px 0px 0px 150px; 
     width: 80%;
 }
 
@@ -368,3 +385,75 @@ a{
 .Accessoires{
     cursor: pointer;
 }
+
+.st_latest-products{
+    display: flex;
+    margin: 0px 0px 0px 150px;
+    height: 500px;
+}
+
+.st_Samsung , .st_Asus {
+    margin-left: 25px;
+}
+
+.st_Samsung, .st_iphone, .st_Asus {
+    padding: 30px;
+    border-radius: 30px;
+    width: 400px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-img{
+    width: 250px;
+}
+
+.st_iphone{
+    background: url(img/iphone-card.png);
+    color: #ffffff;
+}
+
+.st_Samsung{
+    background: url(img/galaxy-s24-card.png);
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*Сторінка phones */
+
+.ph_body{
+    display: flex;
+    justify-content: center;
+}
+
+.products-list{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin-top: 200px;
+}
+
+.my-card{
+    background-color: #7f8c8d;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-my-card{
+    font-size: 20px;
+}
+
+.price-card{
+    display: flex;
+    align-items: center;
+}
+.bell{
+    color: #008CBA;
+    cursor: pointer;
+}
+
+

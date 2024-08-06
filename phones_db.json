@@ -1,0 +1,20 @@
+[
+    {
+        "image":"store-card-phone.png",
+        "title":"Iphone 15 Pro",
+        "description":"Color: blue , Most powerfull chip",
+        "price":"$ 1599"
+    },
+
+    {
+        "title":"Sansung A11",
+        "description":"4.7 inch , ",
+        "price":"$ 299"
+    },
+
+    {
+        "title":"Iphone 13 Pro Max",
+        "description":"Color: Star light , Very powerfull chip, Most butiful cameras",
+        "price":"$ 1499"
+    }
+]
