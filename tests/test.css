@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  
+  .product p {
+    margin-bottom: 10px;
+  }
+  
+  /* Анімація */
+  
+  .header {
+    animation: header-animation 2s ease-in-out;
+  }
+  
+  @keyframes header-animation {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .product {
+    animation: product-animation 2s ease-in-out;
+  }
+  
+  @keyframes product-animation {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

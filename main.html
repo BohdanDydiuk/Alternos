@@ -1,76 +1,90 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
+    <title>Main</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
+<body>
 <header class="mn_header">
-    <div class="mn_header-pages">
+    <div class="mn_header_content">
         <img onclick="location.href='main.html'" src="img/logo.png" alt="logo" class="logo">
-        <a class="mn_a" href="store.html">Store</a>
-        <a class="mn_a" href="phones.html">Phones</a>
-        <a class="mn_a" href="computers.html">Computers</a>
-        <a class="mn_a" href="tablet.html">Tablets</a>
-        <a class="mn_a" href="watches.html">Watch</a>
-        <a class="mn_a" href="vr.html">VR</a>
-        <a class="mn_a" href="headphones.html">Headphones</a>
-        <a class="mn_a" href="TV.html">TV</a>
-        <a class="mn_a" href="Accessoires.html">Accessoires</a>
-        <a class="mn_a" href="Support.html">Support</a>
-        <img src="img/bag.png" alt="bag" class="bag">
-
+        <div class="mn_header-pages">
+            <a class="mn_a" href="store.html">Store</a>
+            <a class="mn_a" href="phones.html">Phones</a>
+            <a class="mn_a" href="computers.html">Computers</a>
+            <a class="mn_a" href="tablet.html">Tablets</a>
+            <a class="mn_a" href="watches.html">Watches</a>
+            <a class="mn_a" href="vr.html">VR</a>
+            <a class="mn_a" href="headphones.html">Headphones</a>
+            <a class="mn_a" href="TV.html">TV</a>
+            <a class="mn_a" href="Accessoires.html">Accessoires</a>
+            <a class="mn_a" href="Support.html">Support</a>
+            <img src="img/bag.png" alt="bag-img" class="bag">
+        </div>
+        <div class="menu">
+            <img src="img/menu-img-white.png" alt="menu-img" class="menu-img">
+            <nav class="nav">
+                <ul class="ul">
+                    <li class="li"><a class="a" href="#">Store</a></li>
+                    <li class="li"><a class="a" href="#">Phones</a></li>
+                    <li class="li"><a class="a" href="#">Computers</a></li>
+                    <li class="li"><a class="a" href="#">Tablets</a></li>
+                    <li class="li"><a class="a" href="#">Watches</a></li>
+                    <li class="li"><a class="a" href="#">VR</a></li>
+                    <li class="li"><a class="a" href="#">Headphones</a></li>
+                    <li class="li"><a class="a" href="#">TV</a></li>
+                    <li class="li"><a class="a" href="#">Accessoires</a></li>
+                    <li class="li"><a class="a" href="#">Support</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
-<body class="mn_shop_body">
-    <div class="mn_banners">
-        <div class="mn_video_banner">
-            <h1 class="mn_h1" style="margin-top: 290px;">Банер або відео з технікою</h1>
+<div class="mn_banners">
+    <div class="mn_video_banner">
+        <h1 class="mn_h1" style="margin-top: 290px;">Банер або відео з технікою</h1>
+    </div>
+    <div class="mn_banner_tel">
+        <p class="mn_banner_tel-txt">Our most powerful cameras. Ultrafast chips. And USB-C </p>
+        <div>
+            <div class="mn_button1">See more</div>
+            <div onclick="location.href='phones.html'" class="mn_button2">Shop Phone</div>
         </div>
-        <div class="mn_banner_tel">
-            <p class="mn_banner_tel-txt">Our most powerful cameras. Ultrafast chips. And USB-C </p>
-            <div>
-                <div class="mn_button1">See more</div>
-                <div onclick="location.href='phones.html'" class="mn_button2">Shop Phone</div>
-            </div>
-        </div>
-        <div class="mn_mini_banners">
-
-            <div class="mn_mini_banners_1">
-
+    </div>
+    <div class="mn_mini_banners">
+        <div class="mn_mini_banners_1">
             <div onclick="location.href='Computers.html'" class="mn_section1">
                 <h2>Баннер про Ноутбуки</h2>
                 <div class="mn_button1">See more</div>
                 <div class="mn_button2">Shop Phone</div>
             </div>
-
             <div class="mn_section2">
                 <h2>Баннер про ШІ</h2>
                 <div class="mn_button1">See more</div>
                 <div class="mn_button2">Shop Phone</div>
             </div>
-
-            </div> 
-            <div class="mn_mini_banners_2">
+        </div> 
+        <div class="mn_mini_banners_2">
             <div class="mn_section3">
                 <h2>Баннер про Праншети</h2>
                 <div class="mn_button1">See more</div>
                 <div class="mn_button2">Shop Phone</div>
             </div>
-                
             <div class="mn_section4">
                 <h2>Баннер про закист</h2>
                 <div class="mn_button1">See more</div>
                 <div class="mn_button2">Shop Phone</div>
             </div>
-            </div>
         </div>
     </div>
-    <footer>
-        <div class="mn_footer">
-            Інфо про компанію, політика конфіденційності, ітg, іna
-        </div>
-    </footer>
+</div>
+<footer>
+    <div class="mn_footer">
+        Інфо про компанію, політика конфіденційності, ітg, іna
+    </div>
+</footer>
+<script src="javascript.js"></script>
 </body>
 </html>

@@ -1,15 +1,18 @@
 [
     {
-        "image":"store-card-phone.png",
         "title":"Iphone 15 Pro",
         "description":"Color: blue , Most powerfull chip",
-        "price":"$ 1599"
+        "price":"$ 1599",
+        "backgroundimage":"img/Iphone-13-pro-img.png",
+        "txtcolor":" #fff"
     },
 
     {
-        "title":"Sansung A11",
-        "description":"4.7 inch , ",
-        "price":"$ 299"
+        "backgroundimage":"img/s24-ultra-img.png",
+        "title":"Sansung S24 ultra",
+        "description":"6.4 inch , ",
+        "price":"$ 1299",
+        "txtcolor":" #ececec"
     },
 
     {

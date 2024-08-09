@@ -1,5 +1,32 @@
 /* Файл із спільними скриптами для всього сайту (анімації, меню, кошик) */
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuImg = document.querySelector('.menu-img');
+    const nav = document.querySelector('.nav');
+    
+    function toggleMenu() {
+        if (nav.style.display === 'block') {
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'block';
+        }
+    }
+
+    if (window.innerWidth < 768) {
+        menuImg.addEventListener('click', toggleMenu);
+    }
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+            nav.style.display = 'none';
+            menuImg.removeEventListener('click', toggleMenu);
+        } else {
+            menuImg.addEventListener('click', toggleMenu);
+        }
+    });
+});
+
 // Функція для отримання значення кукі за ім'ям
 function getCookieValue(cookieName) {
     // Розділяємо всі куки на окремі частини
@@ -29,8 +56,7 @@ async function getProducts() {
 // Генеруємо HTML-код для карточки товару
 function getCardHTML(product) {
     return `
-        <div class="my-card" style="">
-            <img src="${product.image}" alt="${product.name}">
+        <div class="my-card" style=" background:url(${product.backgroundimage}); color: ${product.txtcolor}; ">
             <h5 class="text-my-card">${product.title}</h5>
             <p class="description-card">
                 ${product.description}
