@@ -56,21 +56,31 @@ async function getProducts() {
 // Генеруємо HTML-код для карточки товару
 function getCardHTML(product) {
     return `
-        <div class="my-card" style=" background:url(${product.backgroundimage}); color: ${product.txtcolor}; ">
+        <div class="my-card" style="background:url(${product.backgroundimage}); color: ${product.txtcolor};">
             <h5 class="text-my-card">${product.title}</h5>
-            <p class="description-card">
-                ${product.description}
-            </p>
+            <p class="description-card">${product.description}</p>
             <p class="price-card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-currency-hryvnia"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a2.64 2.64 0 0 1 2.562 -2h3.376a2.64 2.64 0 0 1 2.562 2a2.57 2.57 0 0 1 -1.344 2.922l-5.876 2.938a3.338 3.338 0 0 0 -1.78 3.64a3.11 3.11 0 0 0 3.05 2.5h2.888a2.64 2.64 0 0 0 2.562 -2" /><path d="M6 10h12" /><path d="M6 14h12" /></svg>
-                ${product.price}
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-currency-hryvnia">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M8 7a2.64 2.64 0 0 1 2.562 -2h3.376a2.64 2.64 0 0 1 2.562 2a2.57 2.57 0 0 1 -1.344 2.922l-5.876 2.938a3.338 3.338 0 0 0 -1.78 3.64a3.11 3.11 0 0 0 3.05 2.5h2.888a2.64 2.64 0 0 0 2.562 -2"/>
+                    <path d="M6 10h12"/>
+                    <path d="M6 14h12"/>
+                </svg>
+                $${product.price}
             </p>
-            <button type="button" class="cart-btn" data-product='${JSON.stringify(product)}'>
-            <svg class="bell" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M12.5 17h-6.5v-14h-2" /><path d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
-            Купити</button>
+            <button type="button" class="cart-btn" data-product='{"title":"${product.title}", "price":${product.price}, "description":"${product.description}", "quantity":1}'>
+                <svg class="bell" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-plus">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 4 0a2 2 0 1 0 4 0h-14z"/>
+                    <path d="M16 11v-6a4 4 0 0 0 -8 0v6"/>
+                    <path d="M10 17h4"/>
+                </svg>
+                Додати в кошик
+            </button>
         </div>
     `;
 }
+
 
 // Відображаємо товари на сторінці
 getProducts().then(function (products) {
@@ -93,7 +103,7 @@ getProducts().then(function (products) {
 
 
 // Отримуємо кнопку "Кошик"
-const cartBtn = document.getElementById('cartBtn');
+const cartBtn = document.getElementById('cart-btn');
 
 // Навішуємо обробник подій на клік кнопки "Кошик"
 cartBtn.addEventListener("click", function () {
@@ -109,28 +119,23 @@ class ShoppingCart {
     }
 
     // Додавання товару до кошика
-    addItem(item) {
-        if (this.items[item.title]) {
-            this.items[item.title].quantity += 1; // Якщо товар вже є, збільшуємо його кількість на одиницю
+    addItem(product) {
+        const existingProduct = this.items.find(item => item.id === product.id);
+        if (existingProduct) {
+            existingProduct.quantity += product.quantity;
         } else {
-            this.items[item.title] = item; // Якщо товару немає в кошику, додаємо його
-            this.items[item.title].quantity = 1;
+            this.items.push(product);
         }
-        this.saveCartToCookies();
     }
 
-
-    // Зберігання кошика в кукі
     saveCartToCookies() {
-        let cartJSON = JSON.stringify(this.items);
-        document.cookie = `cart=${cartJSON}; max-age=${60 * 60 * 24 * 7}; path=/`;
+        document.cookie = "cart=" + JSON.stringify(this.items) + ";path=/";
     }
 
-    // Завантаження кошика з кукі
     loadCartFromCookies() {
-        let cartCookie = getCookieValue('cart');
-        if (cartCookie && cartCookie !== '') {
-            this.items = JSON.parse(cartCookie);
+        const cookies = document.cookie.split('; ').find(row => row.startsWith('cart='));
+        if (cookies) {
+            this.items = JSON.parse(cookies.split('=')[1]);
         }
     }
     // Обчислення загальної вартості товарів у кошику
@@ -144,16 +149,53 @@ class ShoppingCart {
 }
 
 // Створення об'єкта кошика 
-let cart = new ShoppingCart();
+// Завантажити кошик із куків
+const cart = new ShoppingCart();
+cart.loadCartFromCookies();
 
+// Додавання товару до кошика при натисканні на кнопку
+document.querySelectorAll('.cart-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const productData = JSON.parse(this.getAttribute('data-product'));
+        cart.addItem(productData);
+        cart.saveCartToCookies();
+        alert(`${productData.name} додано до кошика!`);
+    });
+});
 
-// Функція для додавання товару до кошика при кліку на кнопку "Купити"
-function addToCart(event) {
-    // Отримуємо дані про товар з data-атрибута кнопки
-    const productData = event.target.getAttribute('data-product');
-    const product = JSON.parse(productData);
-
-    // Додаємо товар до кошика
-    cart.addItem(product);
-    console.log(cart);
+// Додавання товару в кошик
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
+
+// Відображення товарів у кошику
+function displayCartItems() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartContainer = document.getElementById('cart-items');
+
+    if (cartContainer) {
+        cartContainer.innerHTML = '';
+        cart.forEach((item, index) => {
+            cartContainer.innerHTML += `
+                <div class="cart-item">
+                    <p>${item.name}</p>
+                    <p>${item.price} USD</p>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                </div>
+            `;
+        });
+    }
+}
+
+// Видалення товару з кошика
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCartItems();
+}
+
+// Виклик функції для відображення товарів у кошику при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', displayCartItems);

@@ -1,23 +1,23 @@
 [
     {
-        "title":"Iphone 15 Pro",
-        "description":"Color: blue , Most powerfull chip",
-        "price":"$ 1599",
-        "backgroundimage":"img/Iphone-13-pro-img.png",
-        "txtcolor":" #fff"
+        "title": "Iphone 15 Pro",
+        "description": "Color: blue, Most powerful chip",
+        "price": 1599,
+        "backgroundimage": "img/Iphone-13-pro-img.png",
+        "txtcolor": "#ffffff"
     },
-
     {
-        "backgroundimage":"img/s24-ultra-img.png",
-        "title":"Sansung S24 ultra",
-        "description":"6.4 inch , ",
-        "price":"$ 1299",
-        "txtcolor":" #ececec"
+        "title": "Samsung S24 Ultra",
+        "description": "6.4 inch, Ultra high-resolution camera",
+        "price": 1299,
+        "backgroundimage": "img/s24-ultra-img.png",
+        "txtcolor": "#ececec"
     },
-
     {
-        "title":"Iphone 13 Pro Max",
-        "description":"Color: Star light , Very powerfull chip, Most butiful cameras",
-        "price":"$ 1499"
+        "title": "Iphone 13 Pro Max",
+        "description": "Color: Star light, Very powerful chip, Beautiful cameras",
+        "price": 1499,
+        "backgroundimage": "img/Iphone-13-pro-max-img.png",
+        "txtcolor": "#ffffff"
     }
 ]
