@@ -14,10 +14,17 @@
         "txtcolor": "#ececec"
     },
     {
-        "title": "Iphone 13 Pro Max",
-        "description": "Color: Star light, Very powerful chip, Beautiful cameras",
+        "title": "Iphone 16",
+        "description": "Color: light green, Very powerful chip, Beautiful cameras, newest iphone",
         "price": 1499,
-        "backgroundimage": "img-products/Iphone-13-pro-max-img.png",
-        "txtcolor": "#ffffff"
+        "backgroundimage": "img-products/Iphone-16-img.png",
+        "txtcolor": "#000000"
+    },
+    {
+        "title": "Samsung Galaxy A24",
+        "description": "Color: Black, Budget phone, A series, simple design",
+        "price": 237,
+        "backgroundimage": "img-products/Samsung-galaxy-a24-img.png",
+        "txtcolor": "grey"
     }
 ]

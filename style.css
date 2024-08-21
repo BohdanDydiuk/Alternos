@@ -507,7 +507,7 @@ a{
 .products-list{
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 1300px;
     margin-top: 200px;
 }
 
@@ -522,7 +522,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .text-my-card{
