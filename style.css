@@ -177,7 +177,7 @@ hr {
 }
 
 .mn_banner_tel {
-    background: url(img/banner_tel.jfif);
+    background: url(img-main/banner_tel.jfif);
     height: 580px;
     display: flex;
     justify-content: center;
@@ -470,12 +470,12 @@ a{
 }
 
 .st_iphone{
-    background: url(img/iphone-card.png);
+    background: url(img-store/iphone-card.png);
     color: #ffffff;
 }
 
 .st_Samsung{
-    background: url(img/galaxy-s24-card.png);
+    background: url(img-store/galaxy-s24-card.png);
     background-color: #000000;
     color: #ffffff;
 }
@@ -587,5 +587,68 @@ button:hover > .bell {
     display: flex;
     align-items: center;
 }
+
+.cart-container{
+    margin-top: 100px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 100px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cart-item-image {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h5 {
+    margin: 0;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+}
+
+.cart-buy-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgb(228, 228, 228);
+    background-color: #fff;
+    max-width: 1237px;
+}
+
+#total-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-buy-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-buy-btn:hover {
+    background-color: #27ae60;
+}
+
 
 /*Сторінка cart*/

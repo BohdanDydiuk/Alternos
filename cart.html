@@ -3,47 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Store Name</title>
+    <title>Кошик</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Your store's description">
-    <meta property="og:title" content="Your Store Name">
-    <meta property="og:description" content="Description of your store">
-    <meta property="og:image" content="img/logo_black.png">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta name="twitter:card" content="summary_large_image">
 </head>
+<header class="ph_header">
+    <div class="ph_header-pages">
+        <img onclick="location.href='main.html'" src="img-other/logo_black.png" alt="logo" class="logo">
+        <a href="store.html">Store</a>
+        <a href="phones.html">Phones</a>
+        <a href="computers.html">Computers</a>
+        <a href="tablet.html">Tablets</a>
+        <a href="watches.html">Watch</a>
+        <a href="vr.html">VR</a>
+        <a href="headphones.html">Headphones</a>
+        <a href="TV.html">TV</a>
+        <a href="Accessoires.html">Accessoires</a>
+        <a href="Support.html">Support</a>
+        <img src="img-other/bag.png" onclick="location.href='cart.html'" alt="cart" class="bag">
+    </div>
+</header>
 <body class="ca_body">
-    <header class="ca_header">
-        <div class="ca_header-pages">
-            <img onclick="location.href='main.html'" src="img/logo_black.png" alt="logo" class="logo">
-            <a href="store.html">Store</a>
-            <a href="phones.html">Phones</a>
-            <a href="computers.html">Computers</a>
-            <a href="tablet.html">Tablets</a>
-            <a href="watches.html">Watch</a>
-            <a href="vr.html">VR</a>
-            <a href="headphones.html">Headphones</a>
-            <a href="TV.html">TV</a>
-            <a href="Accessoires.html">Accessoires</a>
-            <a href="Support.html">Support</a>
-            <img src="img/bag.png" onclick="location.href='cart.html'" alt="cart" class="bag">
-        </div>
-    </header>
-
-    <div id="cart-items"></div>
-
-    <footer>
-        <div class="mn_footer">
-            <p>&copy; 2024 Your Store Name. All rights reserved.</p>
-            <p><a href="privacy.html">Політика конфіденційності</a> | <a href="terms.html">Умови використання</a></p>
-            <div class="social-icons">
-                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="javascript.js" defer></script>
+    <div class="cart-container">
+        <div id="cart-items"></div>
+    </div>
+    <div class="cart-buy-container">
+        <span class="total-price" id="total-price">Total: $0</span>
+        <button class="cart-buy-btn" onclick="redirectToCheckout()">Checkout</button>
+    </div>
+<script src="javascript.js"></script>
 </body>
+<footer>
+    <div class="mn_footer">
+        Інфо про компанію, політика конфіденційності, ітд, ітп
+    </div>
+</footer>
 </html>
