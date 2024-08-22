@@ -652,3 +652,111 @@ button:hover > .bell {
 
 
 /*Сторінка cart*/
+
+/*Сторінка checkout*/
+
+/* Основні стилі для сторінки checkout */
+.checkout-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-left: 158px;
+    margin-top: 8px;
+}
+
+.checkout-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.checkout-section {
+    margin-bottom: 20px;
+}
+
+.checkout-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .checkout-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .checkout-section h2 {
+        font-size: 18px;
+    }
+
+    .checkout-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/*Сторінка checkout*/
