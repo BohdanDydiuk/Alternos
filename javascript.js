@@ -152,5 +152,35 @@ getProducts().then(function (products) {
     });
 });
 
+document.getElementById('checkout-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    window.location.href = 'order_confirmation.html'; // Redirect to the order confirmation page
+});
+
+
 // Відображення товарів у кошику при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', displayCartItems);
+
+
+document.getElementById('checkout-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Assume you have a way to calculate the total price
+    const totalPrice = calculateTotalPrice(); // Replace this with your actual price calculation logic
+    
+    // Store the total price in localStorage
+    localStorage.setItem('totalPrice', totalPrice);
+    
+    // Redirect to the order confirmation page
+    window.location.href = 'order_confirmation.html';
+});
+
+function calculateTotalPrice() {
+    // Your logic to calculate the total price of items in the cart
+    let totalPrice = 0;
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.forEach(item => {
+        totalPrice += item.price;
+    });
+    return totalPrice;
+}

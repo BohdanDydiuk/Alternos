@@ -3,69 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header class="st_header">
-    <div class="st_header-pages">
-        <img onclick="location.href='main.html'" src="img-other/logo_black.png" alt="logo" class="logo">
-        <a href="store.html">Store</a>
-        <a href="phones.html">Phones</a>
-        <a href="computers.html">Computers</a>
-        <a href="tablet.html">Tablets</a>
-        <a href="watches.html">Watch</a>
-        <a href="vr.html">VR</a>
-        <a href="headphones.html">Headphones</a>
-        <a href="TV.html">TV</a>
-        <a href="Accessoires.html">Accessoires</a>
-        <a href="Support.html">Support</a>
-        <img src="img-other/bag.png" onclick="location.href='cart.html'" alt="cart" class="bag">
-    </div>
-</header>
 <body class="st_body">
-    <div class="st_Store_promotxt">
-        <h1 class="st_h1-1">Store.</h1>
-        <div class="st_promotxt"><h1 class="st_h1-2">The best way to buy the products you love.</h1></div>
-    </div>
-    <div class="products">
-        <div onclick="location.href='computers.html'" style="display: flex; flex-direction: column; " class="Computers">
-            <img class="product-img" src="img-store/store-card-computers.png" alt="computer img">
-            <a style="margin-top: 20px; margin-left: 50px;" href="">Computers</a>
+    <header class="st_header">
+        <div class="st_header_content">
+            <img onclick="location.href='main.html'" src="img-other/logo_black.png" alt="logo" class="logo">
+            <nav class="st_header-pages">
+                <a class="st_a" href="store.html">Store</a>
+                <a class="st_a" href="phones.html">Phones</a>
+                <a class="st_a" href="computers.html">Computers</a>
+                <a class="st_a" href="tablet.html">Tablets</a>
+                <a class="st_a" href="watches.html">Watches</a>
+                <a class="st_a" href="vr.html">VR</a>
+                <a class="st_a" href="headphones.html">Headphones</a>
+                <a class="st_a" href="TV.html">TV</a>
+                <a class="st_a" href="accessoires.html">Accessoires</a>
+                <a class="st_a" href="support.html">Support</a>
+                <img src="img-other/bag.png" onclick="location.href='cart.html'" alt="cart" class="bag">
+            </nav>
+            <div class="menu">
+                <div class="menu-class">
+                    <img src="img-other/menu-img-black.png" alt="menu" class="menu-img">
+                </div>
+                <nav class="nav">
+                    <ul class="ul">
+                        <li class="li" onclick="location.href='store.html'" ><a class="a">Store</a></li>
+                        <li class="li" onclick="location.href='phones.html'" ><a class="a">Phones</a></li>
+                        <li class="li" onclick="location.href='computers.html'" ><a class="a" onclick="location.href='computers.html'">Computers</a></li>
+                        <li class="li" onclick="location.href='tablet.html'" ><a class="a">Tablets</a></li>
+                        <li class="li" onclick="location.href='watches.html'" ><a class="a">Watches</a></li>
+                        <li class="li" onclick="location.href='VR.html'" ><a class="a">VR</a></li>
+                        <li class="li" onclick="location.href='headphones.html'" ><a class="a">Headphones</a></li>
+                        <li class="li" onclick="location.href='TV.html'" ><a class="a">TV</a></li>
+                        <li class="li" onclick="location.href='Accessoires.html'"><a class="a">Accessoires</a></li>
+                        <li class="li" onclick="location.href='Support.html'" ><a class="a">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div onclick="location.href='Phones.html'" style="display: flex; flex-direction: column; " class="Phones">
-            <img class="product-img" src="img-store/store-card-phone.png" alt="phone img">
-            <a style="margin-top: 20px; margin-left: 65px;" href="">Phones</a>
-        </div>
-        <div onclick="location.href='tablet.html'" style="display: flex; flex-direction: column; " class="Tablets">
-            <img class="product-img" src="img-store/store-card-tablet.png" alt="tablet png">
-            <a style="margin-top: 20px; margin-left: 55px;" href="">Tablets</a>
-        </div>
-        <div onclick="location.href='watches.html'" style="display: flex; flex-direction: column; " class="Watches">
-            <img class="product-img" src="img-store/store-card-watch.png" alt="watch img">
-            <a style="margin-top: 20px; margin-left: 15px;" href="">Watches</a>
-        </div>
-        <div onclick="location.href='vr.html'" style="display: flex; flex-direction: column; " class="VRs">
-            <img class="product-img" src="img-store/store-card-VR.png" alt="VR img">
-            <a style="margin-top: 20px; margin-left: 70px;" href="">VR</a>
-        </div>
-        <div onclick="location.href='headphones.html'" style="display: flex; flex-direction: column; " class="Headphones">
-            <img class="product-img" src="img-store/store-card-headphones.png" alt="headphones img">
-            <a style="margin-top: 20px; margin-left: 50px;" href="">Headphones</a>
-        </div>
-        <div onclick="location.href='TV.html'" style="display: flex; flex-direction: column; " class="TVs">
-            <img class="product-img" src="img-store/store-card-TV.png" alt="TV img">
-            <a style="margin-top: 20px; margin-left: 45px;" href="">TV</a>
-        </div>
-        <div onclick="location.href='Accessoires.html'" style="display: flex; flex-direction: column; " class="Accessoires">
-            <img class="product-img" src="img-store/store-card-accessories.png" alt="">
-            <a style="margin-top: 20px; margin-left: 50px;" href="">Accessoires</a>
-        </div>
-    </div>
-    <div>
+    </header>
+
+    <main class="st_body">
         <div class="st_Store_promotxt">
-            <h1 class="st_h1-3">The latest.</h1>
-            <div class="st_promotxt"><h1 class="st_h1-4">Take a look at what’s new, right now.</h1></div>
+            <h1 class="st_h1-1">Store</h1>
+            <div class="st_promotxt">
+                <h1 class="st_h1-2">The best way to buy the products you love.</h1>
+            </div>
         </div>
+
+        <div class="products">
+            <div onclick="location.href='computers.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-computers.png" alt="Computers">
+                <a href="computers.html">Computers</a>
+            </div>
+            <div onclick="location.href='phones.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-phone.png" alt="Phones">
+                <a href="phones.html">Phones</a>
+            </div>
+            <div onclick="location.href='tablet.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-tablet.png" alt="Tablets">
+                <a href="tablet.html">Tablets</a>
+            </div>
+            <div onclick="location.href='watches.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-watch.png" alt="Watches">
+                <a href="watches.html">Watches</a>
+            </div>
+            <div onclick="location.href='vr.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-VR.png" alt="VR">
+                <a href="vr.html">VR</a>
+            </div>
+            <div onclick="location.href='headphones.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-headphones.png" alt="Headphones">
+                <a href="headphones.html">Headphones</a>
+            </div>
+            <div onclick="location.href='TV.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-TV.png" alt="TV">
+                <a href="TV.html">TV</a>
+            </div>
+            <div onclick="location.href='accessoires.html'" class="product-category">
+                <img class="product-img" src="img-store/store-card-accessories.png" alt="Accessoires">
+                <a href="accessoires.html">Accessoires</a>
+            </div>
+        </div>
+
         <div class="st_latest-products">
             <div onclick="location.href='phones.html'" class="st_iphone">
                 <h3>IPhone 15 Pro</h3>
@@ -75,20 +97,19 @@
             <div onclick="location.href='computers.html'" class="st_Asus">
                 <h3>Asus Vivobook S 15</h3>
                 <h1>Copilot + PC</h1>
-                <h3>From $1,099.99 or $45,83/mo for 24 mo.*</h3>
-                <img class="card-img" src="img-store/Asus-card.png" alt="Asus-card">
+                <h3>From $1,099.99 or $45.83/mo for 24 mo.*</h3>
+                <img class="card-img" src="img-store/Asus-card.png" alt="Asus Vivobook">
             </div>
             <div onclick="location.href='phones.html'" class="st_Samsung">
-                <h3>Samsung s24 ultra</h3>
+                <h3>Samsung S24 Ultra</h3>
                 <h1>AI</h1>
-                <h3>From $1.299 or $54.125/mo for 24 mo.*</h3>
+                <h3>From $1,299 or $54.12/mo for 24 mo.*</h3>
             </div>
         </div>
-    </div>
+    </main>
+
+    <footer class="mn_footer">
+        <p>Інфо про компанію, політика конфіденційності, ітg, іna</p>
+    </footer>
 </body>
-<footer>
-    <div class="mn_footer">
-        Інфо про компанію, політика конфіденційності, ітg, іna
-    </div>
-</footer>
 </html>
